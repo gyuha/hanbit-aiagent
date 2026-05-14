@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="glm-4.7")
 
 server_params = StdioServerParameters(
     command="python",

@@ -11,7 +11,7 @@ DB_PATH = "./rag_agent/chroma_db" # [ 1 ]
 
 vectorstore = Chroma(
     persist_directory=DB_PATH,
-    embedding_function=OpenAIEmbeddings(model="text-embedding-3-small"),
+    embedding_function=OpenAIEmbeddings(model="embedding-3"),
     collection_name="korean_pdf",
 )
 

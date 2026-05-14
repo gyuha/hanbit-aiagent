@@ -21,7 +21,7 @@ def _clean_content(content: str) -> str:
         정리된 콘텐츠
     """
 
-    llm = get_model("gpt-4o-mini")
+    llm = get_model("glm-4.5-air")
 
     cleaning_prompt = f"""다음 웹페이지에서 추출한 텍스트를 정리해주세요.
 
@@ -93,7 +93,7 @@ def chatbot(state: MessagesState):
         },
     ] + state["messages"]
 
-    llm = get_model("gpt-4o")
+    llm = get_model("glm-4.7")
     result = llm.bind_tools([web_content_loader]).invoke(messages) # [ 5 ]
 
     return {"messages": [result]}
@@ -123,7 +123,7 @@ def question_generator_node(state: MessagesState):
     3. 각 질문은 번호를 매겨서 url과 함께 딕셔너리 형태로 제공
     4. url 별로 1-2 개의 질문을 생성
     """
-    llm = get_model("gpt-4o-mini")
+    llm = get_model("glm-4.5-air")
     response = llm.invoke(prompt)
     questions = response.content
 

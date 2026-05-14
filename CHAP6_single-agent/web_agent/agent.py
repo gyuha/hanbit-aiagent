@@ -16,7 +16,7 @@ load_dotenv()
 tool = TavilySearch(max_results=3)
 tools = [tool]
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="glm-4.7")
 llm_with_tools = llm.bind_tools(tools)
 
 

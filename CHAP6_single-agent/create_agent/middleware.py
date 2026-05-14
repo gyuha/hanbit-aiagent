@@ -10,8 +10,8 @@ load_dotenv()
 
 
 # ===== 모델 정의 =====
-basic_model = ChatOpenAI(model="gpt-4o-mini") # [ 1 ]
-advanced_model = ChatOpenAI(model="gpt-4o")
+basic_model = ChatOpenAI(model="glm-4.5-air") # [ 1 ]
+advanced_model = ChatOpenAI(model="glm-4.7")
 
 
 # ===== 미들웨어 정의 =====
@@ -23,7 +23,7 @@ def dynamic_model_selection(request: ModelRequest, handler) -> ModelResponse:
 
     if message_count > 10:
         model = advanced_model
-        print("복잡한 대화 감지: 고급 모델(gpt-4o) 사용")
+        print("복잡한 대화 감지: 고급 모델(glm-4.7) 사용")
     else:
         model = basic_model
 

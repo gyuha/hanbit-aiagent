@@ -10,7 +10,7 @@ from retriever import retriever, retriever_tool
 from state import AgentState
 
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="glm-4.7")
 
 
 def chatbot(state: AgentState):

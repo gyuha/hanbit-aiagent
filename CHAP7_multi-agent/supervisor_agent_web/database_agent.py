@@ -102,7 +102,7 @@ def search_web_data( # [ 1 ]
     except Exception as e:
         return f"웹 데이터 검색에 실패했습니다. 오류: {repr(e)}"
 
-llm = get_model("gpt-4o")
+llm = get_model("glm-4.7")
 
 database_agent = create_agent(
     llm,

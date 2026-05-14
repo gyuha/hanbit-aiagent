@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="glm-4.7")
 
 class Grade(BaseModel):
     """관련성 확인을 위한 점수 스키마"""

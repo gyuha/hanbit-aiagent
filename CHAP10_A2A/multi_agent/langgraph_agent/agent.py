@@ -57,7 +57,7 @@ class LangGraphAgent: # [ 4 ]
     def __init__(self):
         """에이전트 초기화"""
         self.llm = ChatOpenAI( # [ 5 ]
-            model='gpt-4o'
+            model='glm-4.7'
         )
 
         self.tools = [calculator, get_current_info]

@@ -53,7 +53,7 @@ def get_contact_info() -> str:
     """
 
 
-model = get_model(model_name="gpt-4o")
+model = get_model(model_name="glm-4.7")
 tools = [get_vacation_policy, get_work_hours_info, get_benefits_info, get_contact_info]
 
 faq_agent = create_agent( # [ 2 ]

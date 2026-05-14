@@ -144,7 +144,7 @@ class OrchestratorAgent:
             {"intent": "...", "plan": [...], "direct_answer": "..."}
         """
         response = await self.openai_client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="glm-4.5-air",
             messages=[
                 {"role": "system", "content": self.SYSTEM_PROMPT},
                 {"role": "user", "content": query}
@@ -278,7 +278,7 @@ class OrchestratorAgent:
         results_text = json.dumps(results, ensure_ascii=False, indent=2)
 
         response = await self.openai_client.chat.completions.create(
-            model="gpt-4o",
+            model="glm-4.7",
             messages=[
                 {
                     "role": "system",

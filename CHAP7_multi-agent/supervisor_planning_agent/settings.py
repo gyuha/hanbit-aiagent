@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import MessagesState
 
 def get_model():
-    llm = ChatOpenAI(model="gpt-4o")
+    llm = ChatOpenAI(model="glm-4.7")
     return llm
 class State(MessagesState):
     plan: List[str]

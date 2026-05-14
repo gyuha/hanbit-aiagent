@@ -41,8 +41,8 @@ def get_supabase() -> Client:
     return supabase
 
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+llm = ChatOpenAI(model="glm-4.5-air", temperature=0)
+embeddings = OpenAIEmbeddings(model="embedding-3")
 
 
 def get_embedding(text: str) -> List[float]:
@@ -611,7 +611,7 @@ def _generate_content_response(question: str, search_results: List[Dict], source
         }
     ]
 
-    generate_llm = ChatOpenAI(model="gpt-4o")
+    generate_llm = ChatOpenAI(model="glm-4.7")
     response = generate_llm.invoke(messages)
     answer = response.content
 

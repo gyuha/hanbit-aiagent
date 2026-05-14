@@ -6,7 +6,7 @@ from langchain.messages import HumanMessage
 from handoff_tools import create_handoff_messages
 from settings import AgentState, get_model
 
-model = get_model(model_name="gpt-4o") # [ 1 ]
+model = get_model(model_name="glm-4.7") # [ 1 ]
 tavily_search = TavilySearch(max_results=3)
 
 web_agent = create_agent(

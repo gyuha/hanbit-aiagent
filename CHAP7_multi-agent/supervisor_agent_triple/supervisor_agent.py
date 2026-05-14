@@ -27,7 +27,7 @@ handoff_tools = [ # [ 2 ]
     )
 ]
 
-model = get_model(model_name="gpt-4o") # [ 3 ]
+model = get_model(model_name="glm-4.7") # [ 3 ]
 
 supervisor = create_agent(
     model=model,

@@ -13,7 +13,7 @@ class Router(TypedDict): # [ 1 ]
 class State(MessagesState):
     next: str
 
-llm = get_model("gpt-4o")
+llm = get_model("glm-4.7")
 
 def supervisor_node(state: State) -> Command[Literal["web_agent", "database_agent", END]]:
     messages = [ # [ 2 ]

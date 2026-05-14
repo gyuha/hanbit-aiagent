@@ -11,7 +11,7 @@ load_dotenv()
 
 
 # ===== 모델 정의 =====
-model = ChatOpenAI(model="gpt-4o-mini")
+model = ChatOpenAI(model="glm-4.5-air")
 
 # 금지어 목록
 BLOCKED_WORDS = ["바보", "멍청이", "나쁜말"]

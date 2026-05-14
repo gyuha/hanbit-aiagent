@@ -227,7 +227,7 @@ class AgentOrchestrator:
                 print(f"\n🔄 반복 {iteration}:")
 
                 response = await self.openai_client.chat.completions.create( # [ 2 ]
-                    model=os.getenv('OPENAI_MODEL', 'gpt-4o-mini'),
+                    model=os.getenv('OPENAI_MODEL', 'glm-4.5-air'),
                     messages=messages,
                     tools=[send_message_tool],
                     tool_choice="auto",

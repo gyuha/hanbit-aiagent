@@ -13,7 +13,7 @@ DB_PATH = "./supervisor_agent_triple/chroma_db" # [ 1 ]
 
 persist_db = Chroma(
     persist_directory=DB_PATH,
-    embedding_function=OpenAIEmbeddings(),
+    embedding_function=OpenAIEmbeddings(model="embedding-3"),
     collection_name="documents",
 )
 persist_db.get()
@@ -113,7 +113,7 @@ def vector_retriever(query: str, filename: str = "") -> str:
         return f"검색 중 오류가 발생했습니다: {str(e)}"
 
 
-model = get_model(model_name="gpt-4o")
+model = get_model(model_name="glm-4.7")
 tools = [vector_retriever, list_all_documents]
 
 db_agent = create_agent(

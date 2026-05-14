@@ -136,7 +136,7 @@ class MCPAgent: # [ 1 ]
             }
 
             response = await self.openai_client.chat.completions.create( # [ 3 ]
-                model="gpt-4o-mini",
+                model="glm-4.5-air",
                 messages=messages,
                 tools=tools_for_openai,
                 tool_choice="auto"
@@ -185,7 +185,7 @@ class MCPAgent: # [ 1 ]
                     })
 
                 final_response = await self.openai_client.chat.completions.create( # [ 3 ]
-                    model="gpt-4o-mini",
+                    model="glm-4.5-air",
                     messages=messages
                 )
 

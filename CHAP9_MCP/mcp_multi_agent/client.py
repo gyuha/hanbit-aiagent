@@ -24,7 +24,7 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 from langchain_openai import ChatOpenAI
 
-model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="glm-4.7")
 
 ######################## GRAPH STATE ########################
 

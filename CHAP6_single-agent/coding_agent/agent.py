@@ -11,7 +11,7 @@ load_dotenv()
 # tools = [python_exec_tool]
 tools = [python_exec_tool, file_write_tool]
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="glm-4.7")
 # llm = ChatAnthropic(model="claude-opus-4-1-20250805") # 책의 실행 결과는 본 클로드 모델을 사용하여 나온 결과입니다.
 
 graph = create_agent(

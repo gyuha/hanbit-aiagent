@@ -58,7 +58,7 @@ def main():
 
     vectorstore = Chroma.from_documents( # [ 5 ]
         documents=all_docs,
-        embedding=OpenAIEmbeddings(model="text-embedding-3-small"),
+        embedding=OpenAIEmbeddings(model="embedding-3"),
         persist_directory=DB_PATH,
         collection_name="documents"
     )
